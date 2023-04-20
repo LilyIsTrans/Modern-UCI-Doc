@@ -4,7 +4,7 @@ The intent of this document is to faithfully represent the UCI protocol as it st
 If you believe the UCI protocol is any way misrepresented by this document, please open an issue or submit a pull request.
 
 ## Prettiness Contributions
-Additionally, while I am capable of writing basic HTML to make a more interactive and navigable document than the original text file, I am not much of an artist or web designer, I mostly do native application programming. If you think you can make the site pretty, without diminishing it's ability to be downloaded in it's entirety without losing anything (And no javascript or WASM or anything. This site should be static!), feel free to make (a) pull request(s) and/or get in contact with me to be added as a contributor.
+Additionally, while I am capable of writing basic HTML to make a more interactive and navigable document than the original text file, I am not much of an artist or web designer, I mostly do native application programming. If you think you can make the site pretty, without diminishing it's ability to be downloaded in it's entirety without losing anything (please avoid any complicated scripts), feel free to make (a) pull request(s) and/or get in contact with me to be added as a contributor.
 
 ## All contributions
 Please add yourself as an author to any pages you contribute to
