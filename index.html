@@ -1,22 +1,47 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
+        <meta charset="UTF-8">
+        <title>Modern UCI Documentation</title>
+        <meta name="author" content="Riley John McCabe">
+        <meta name="description" content="Index of protocol">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="main.css">
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+        <article id="Intro">
+            <h1 id="Page Title"><abbr title="Universal Chess Interface">UCI</abbr> Protocol Specification</h1>
+            <p id="Introduction">
+                Welcome! I recently started a project creating a <abbr>UCI</abbr> chess engine,
+                only to find that every source copy-pastes the same poorly-formatted document from 2006,
+                which, without intending any offense to the original authors, was extremely clunky to read in parts,
+                and rather unclear about much of the specification.
+            </p>
+            
+            <p>
+                The intention of this site is to remedy this situation. The intent of this site is <i>not</i> 
+                to in any way change the standard itself, only to clarify and improve it's documentation.
+            </p>
+        </article>
+        <article id="Table of contents">
+            <h1 id="ToC header">Table of contents</h1>
+            <nav>
+                <ol>
+                    <li>
+                        <a href="overview.html">Protocol Overview</a>
+                    </li>
+                    <li>
+                        <a href="commands/engine/index.html">Commands from the engine to the GUI</a>
+                    </li>
+                    <li>
+                        <a href="commands/gui/index.html">Commands from the GUI to the engine</a>
+                    </li>
+                </ol>
+            </nav>
+        </article>
         
-        <script src="" async defer></script>
+        
+        <iframe id="footer" src="footer.html" frameborder="0"></iframe>
     </body>
+    
 </html>

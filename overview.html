@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UCI Overview</title>
+    <meta name="author" content="Riley John McCabe">
+    <meta name="description" content="UCI Protocol Overview">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <main>
+        <h1>Startup procedure</h1>
+        <p>The GUI (or other interface) must always start first. Engines are started by the GUI.</p>
+        <aside>
+            All communication between GUI and engine happen through the engine's standard input and output.
+        </aside>
+        <ol id="Startup Procedure">
+            <li>The GUI starts an engine which implements the UCI protocol, capturing it's standard input and output.</li>
+            <li>The GUI sends the <a href="commands/gui/uci.html">uci</a> command, indicating that the engine should operate in UCI mode.</li>
+            <li>The engine must respond with the <a href="commands/engine/id.html">id</a> command to identify itself.</li>
+            <li>
+                The engine may, after the <a href="commands/engine/id.html">id</a> command,
+                send one or more <a href="commands/engine/option.html">option</a> commands,
+                defining any configuration options the engine may have in addition to those
+                defined by the standard.
+            </li>
+            <li>
+                The engine must then send the <a href="commands/engine/uciok.html">uciok</a> command, confirming that it is done
+                sending <a href="commands/engine/option.html">option</a> commands and that it is configured in uci mode. If the 
+                engine does not send the <a href="commands/engine/uciok.html">uciok</a> command within a reasonable amount of time,
+                the GUI should forcibly terminate the engine process and assume that an error occured within the engine.
+            </li>
+        </ol>
+        <h1>Normal operation</h1>
+        <p>
+            Once the startup procedure is complete, the UCI protocol has been initialized.
+            For lack of a better term, I will refer to this initialized state as "normal operation".
+        </p>
+        <p>
+            During normal operation, both the engine and the gui must be able to accept, process, and potentially 
+            respond to commands from the other at all times, even when busy. This should likely be handled
+            by using asynchronous threads separate from the main bulk of the program logic to handle communication,
+            but the standard does not require any particular way to ensure commands are always processed immediately.
+        </p>
+        <p>
+            The engine should never do anything without being told. It should not spend idle time pondering moves,
+            it should only ponder when the GUI tells it to.
+        </p>
+        <p>
+            What follows is a list of "interactions" or "conversations" that the engine and GUI might have.
+            Any of these may be initiated at any time. For additional information on a specific individual
+            command, simply click on that command anywhere in the page.
+        </p>
+    </main>
+    <iframe id="footer" src="footer.html" frameborder="0"></iframe>
+</body>
+</html>
