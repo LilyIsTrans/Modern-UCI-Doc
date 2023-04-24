@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Modern UCI Documentation</title>
+        <meta name="author" content="Riley John McCabe">
+        <meta name="description" content="id command">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../../main.css">
+        <script src="../../js/includeHTML.js"></script>
+    </head>
+    <body>
+        <main>
+            <h1>The "isready" command</h1>
+            <div>
+                <h3>Use</h3>
+                <p>
+                    The isready command should be sent after the GUI has sent commands that may require the engine to pause for some time,
+                    or in order to check that the engine has not crashed.
+                    <br>
+                    The isready command must <i>always</i> be answered with the <a href="../engine/readyok">readyok</a> command as soon as the
+                    engine is ready to recieve additional commands.
+                </p>
+            </div>
+        </main>
+        <div data-src="../../footer.html"></div>
+    </body>
+</html>
